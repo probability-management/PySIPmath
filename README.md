@@ -1,6 +1,3 @@
-# PyHDR
-Python implementation of the HDR standard 
-
 # PySIPmath
 Package containing the export and import functions for using/making SIP libraries:
 
@@ -13,8 +10,3 @@ in an .xlsx format.
 
 ##chanceCalc
 Import function for SIPlibraries; for use in monte carlo simulation or data imports.
-
-# Installation
-## Windows
-To install on windows, run the following command in the terminal:
-py -m pip install https://github.com/probability-management/PyHDR/archive/refs/heads/main.zip
