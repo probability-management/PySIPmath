@@ -126,7 +126,3 @@ def SIP2library(SIPdata, file_name, author, SIPmetadata = []):
     
     workbook.close()
     print("Done! SIP Library saved successfully to your current working directory.")
-SIPLibraryGenerator(Data_Frame, file_name1, author)
-
-# This tests the case where you do include metadata:
-SIPLibraryGenerator(Data_Frame, file_name2, author, Meta_Data)
