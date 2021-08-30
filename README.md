@@ -8,5 +8,5 @@ Used for outputting pandas DataFrames as SIPmath 2.0 libraries in an .xlsx forma
 Used for outputting pandas DataFrames cotaining data or SIPs as SIPmath 3.0 libraries 
 in an .xlsx format.
 
-##chanceCalc
+## chanceCalc
 Import function for SIPlibraries; for use in monte carlo simulation or data imports.
