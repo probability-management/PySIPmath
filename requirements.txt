@@ -1,0 +1,6 @@
+pytest
+sphinx
+scipy
+pandas
+metalog
+matplotlib
