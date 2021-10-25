@@ -1,0 +1,2583 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "name": "Gaussian Copula Development Time Library",
+      "dateCreated": "2021-07-03",
+      "version": "0",
+      "provenance": "SLS 4-23-21",
+      "globalVariables": [
+        {
+          "name": "correlationMatrixValue",
+          "value": {
+            "columns": ["Accounts", "Products", "Orders", "Fulfillment"],
+            "rows": ["Accounts", "Products", "Orders", "Fulfillment"],
+            "matrix": [
+              { "row": "Accounts"   , "col": "Accounts"   , "value": 1.00 },
+              { "row": "Accounts"   , "col": "Products"   , "value": 0.00 },
+              { "row": "Accounts"   , "col": "Orders"     , "value": 0.00 },
+              { "row": "Accounts"   , "col": "Fulfillment", "value": 0.00 },
+              { "row": "Products"   , "col": "Products"   , "value": 1.00 },
+              { "row": "Products"   , "col": "Orders"     , "value": 0.00 },
+              { "row": "Products"   , "col": "Fulfillment", "value": 0.75 },
+              { "row": "Orders"     , "col": "Orders"     , "value": 1.00 },
+              { "row": "Orders"     , "col": "Fulfillment", "value": 0.00 },
+              { "row": "Fulfillment", "col": "Fulfillment", "value": 1.00 }
+            ]
+          }
+        },
+        {
+          "name": "sumOfIidLognormals",
+          "value": [
+            {
+              "shapeValue": 1.1,
+              "numberOfIIDs": 1,
+              "aCoefficients": [
+                 2.302605, -0.012263,  0.003631,  0.236955, -0.014925,  0.137107, -0.323127, 
+                -0.012196,  0.040094
+              ]
+            },
+            {
+              "shapeValue": 1.1,
+              "numberOfIIDs": 2,
+              "aCoefficients": [
+                 2.997134, -0.005738,  0.006037,  0.155605, -0.024809,  0.086815, -0.197671, 
+                -0.020988,  0.065798
+              ]
+            },
+            {
+              "shapeValue": 1.1,
+              "numberofIIDs": 3,
+              "aCoefficients": [
+                 3.403081, -0.007068, -0.001965,  0.137062,  0.007647,  0.079549, -0.191059, 
+                 0.006260, -0.014339
+              ]
+            },
+            {
+              "shapeValue": 1.2,
+              "numberofIIDs": 1,
+              "aCoefficients": [
+                 2.302623, -0.023458,  0.006946,  0.453277, -0.028551,  0.262276, -0.618120, 
+                -0.023329,  0.076697
+              ]
+            },
+            {
+              "shapeValue": 1.2,
+              "numberofIIDs": 2,
+              "aCoefficients": [
+                 3.000814, -0.012044,  0.009722,  0.302727, -0.040367,  0.170339, -0.393583, 
+                -0.033614,  0.107979
+              ]
+            },
+            {
+              "shapeValue": 1.2,
+              "numberofIIDs": 3,
+              "aCoefficients": [
+                 3.407988, -0.012641, -0.002373,  0.258786,  0.009286,  0.149144, -0.353578, 
+                 0.007015, -0.013292
+              ]
+            }
+          ]
+        }
+      ],
+      "U01": {
+        "rng": [
+          {
+            "name": "HDR1",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 1, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR2",
+            "function": "HDR_2_0",
+            "arguments": {
+              "counter": "PM_Index",
+              "entity": 9039920,
+              "varId": 2,
+              "seed3": {"type": "parameter", "name": "User-entered Seed3"},
+              "seed4": 0
+            }
+          },
+          {
+            "name": "HDR3",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 3, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR4",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 4, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR5",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 5, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR6",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 6, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR7",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 7, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR8",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 8, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "indexRng",
+            "function": "Index",
+            "arguments": {"counter": "PM_Index"}
+          },
+          {
+            "name": "HDR9",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 9, "seed3": 0, "seed4": 0}
+          },
+          {
+            "name": "HDR10",
+            "function": "HDR_2_0",
+            "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 10, "seed3": 0, "seed4": 0}
+          }
+        ],
+        "copula": [
+          {
+            "name": "Gaussian",
+            "function": "GaussianCopula",
+            "arguments": {
+              "correlationMatrix": {"type": "globalVariables", "value": "correlationMatrixValue"},
+              "rng": ["HDR4", "HDR5", "HDR6", "HDR7"]
+            },
+            "copulaLayer": ["cl1", "cl2", "cl3", "cl4"]
+          },
+          {
+            "name": "HappyCopulaLib (array)",
+            "function": "SIP_Array",
+            "arguments": {
+              "type": "array",
+              "value": [
+                [0.3782, 0.2752, 0.4712, 0.9722, 0.5692, 0.5942, 0.9422, 0.1572, 0.5682, 0.5032],
+                [0.1272, 0.0512, 0.0162, 0.5962, 0.6462, 0.7072, 0.1732, 0.2382, 0.6432, 0.0012]
+              ]
+            },
+            "copulaLayer": ["HapCopula", "PyCopula"]
+          },
+          {
+            "name": "HappyCopulaLib (csv)",
+            "function": "SIP_Array",
+            "arguments": {
+              "type": "csv",
+              "url": "https://sipmath.network/libraries/HappyCopulaSimple.csv",
+              "value": ["HapCopula", "PyCopula"]
+            },
+            "copulaLayer": ["HapCopula", "PyCopula"]
+          },
+          {
+            "name": "HappyCopulaLib (dist)",
+            "function": "SIP_Array",
+            "arguments": {
+              "type": "dist",
+              "value": [
+                "<dist name=\"Steelhead1\" avg=\"0.49970000000000014\" min=\"0.0002\" max=\"0.9992\" count=\"1000\" type=\"Double\" origin=\"ProbabilityManagement.org\" ver=\"1.1\">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</dist>", 
+                "<dist name=\"Steelhead2\" avg=\"0.4997000000000002\" min=\"0.0002\" max=\"0.9992\" count=\"1000\" type=\"Double\" origin=\"ProbabilityManagement.org\" ver=\"1.1\">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</dist>"
+              ]
+            },
+            "copulaLayer": ["HapCopula", "PyCopula"]
+          },
+          {
+            "name": "HappyCopulaLib (xlsx)",
+            "function": "SIP_Array",
+            "arguments": {
+              "type": "xlsx",
+              "url": "https://sipmath.network/libraries/HappyCopulaLib.xlsx",
+              "value": ["HapCopula", "PyCopula"]
+            },
+            "copulaLayer": ["HapCopula", "PyCopula"]
+          }
+        ]
+      },
+      "sips": [
+        {
+          "name": "Variable1",
+          "ref": {"source": "rng", "name": "HDR1"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 0,
+            "upperBound": 5,
+            "aCoefficients": [
+              -0.44366710027334577,  0.31428823046335125, -0.46025990428473268, 
+               0.52556291243339126,  2.11565238380833565
+            ]
+          }
+        },
+        {
+          "name": "Variable2_seed3_param",
+          "ref": {"source": "rng", "name": "HDR2"},
+          "function": "Metalog_1_0",
+          "rounding": "nearest",
+          "arguments": {
+            "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+          }
+        },
+        {
+          "name": "StandardNormal",
+          "ref": {"source": "rng", "name": "HDR3"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "aCoefficients": [
+              -1.18721e-8, -108.7360185, 0.000228037, 437.4513354, -0.000910088, 988.3027041, 
+              -3370.883493, -0.001941269, 0.006475465, -2823.944368, 7434.879183, 
+              0.004897097, -0.011367609, 2456.743398, -3595.592826, -0.003114859
+            ]
+          }
+        },
+        {
+          "name": "StandardNormal",
+          "ref": {"source": "rng", "name": "HDR3"},
+          "environment": "ExcelFrontline",
+          "function": "PsiNormal",
+          "arguments": {"mean": 0, "stdDev": 1}
+        },
+        {
+          "name": "StandardNormal",
+          "ref": {"source": "rng", "name": "HDR3"},
+          "environment": "ExcelPalisade",
+          "function": "RiskNormal",
+          "arguments": {"mean": 0, "stdDev": 1}
+        },
+        {
+          "name": "Accounts",
+          "ref": {"source": "copula", "name": "Gaussian", "copulaLayer": "cl1"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "aCoefficients": [9.872717622, 1.678242357, 2.54967822, 3.535388319, -13.40905029]
+          },
+          "metadata": {
+            "min": 0,
+            "mean": 10,
+            "Trial1": 5.91064824323855,
+            "Trial2": 3.99951401423695,
+            "Trial3": 3.61593085127843,
+            "max": 38.59529574,
+            "density": [
+              0.004109283, 0.042110568, 0.091705010, 0.110006024, 0.122020569, 0.134235996, 
+              0.147896307, 0.161461431, 0.167672333, 0.152978674, 0.117263845, 0.080513010, 
+              0.053583880, 0.035823821, 0.024233148, 0.016480777, 0.011221878, 0.008189092, 
+              0.005478863, 0.004659543, 0.003840222, 0.003020901, 0.002201580, 0.001382259, 
+              0.000562938
+            ]
+          }
+        },
+        {
+          "name": "Products",
+          "ref": {"source": "copula", "name": "Gaussian", "copulaLayer": "cl2"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+          },
+          "metadata": {
+            "min": 0,
+            "mean": 10,
+            "Trial1": 4.81850430027545,
+            "Trial2": 16.264999616127,
+            "Trial3": 9.21182344011462,
+            "max": 33.17541333,
+            "density": [
+              0.002930180, 0.018377025, 0.043616484, 0.071502559, 0.088976553, 0.101891981, 
+              0.114180833, 0.127937682, 0.144722341, 0.165708773, 0.189118409, 0.198621052, 
+              0.162260460, 0.103661376, 0.062148829, 0.037849594, 0.023736807, 0.015023748, 
+              0.010251008, 0.006852863, 0.005627723, 0.004402584, 0.003177444, 0.001952305, 
+              0.000727165
+            ]
+          }
+        },
+        {
+          "name": "Orders",
+          "ref": {"source": "copula", "name": "Gaussian", "copulaLayer": "cl3"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "aCoefficients": [8.526657058, 4.390832871, 7.645594813, -11.34424622, -27.90451926]
+          },
+          "metadata": {
+            "min": 0.677003797,
+            "mean": 10,
+            "Trial1": 8.84993813887317,
+            "Trial2": 5.73877017205265,
+            "Trial3": 7.90854997496018,
+            "max": 97.99099759,
+            "density": [
+              0.003085439, 0.163024200, 0.244463356, 0.195975175, 0.078683936, 0.042542229, 
+              0.026881900, 0.018374301, 0.013142720, 0.009717621, 0.007312950, 0.005589352, 
+              0.004199015, 0.003404700, 0.002639063, 0.001993546, 0.001794539, 0.001595532, 
+              0.001396525, 0.001197518, 0.000998511, 0.000799504, 0.000600498, 0.000401491, 
+              0.000202484
+            ]
+          }
+        },
+        {
+          "name": "Fulfillment",
+          "ref": {"source": "copula", "name": "Gaussian", "copulaLayer": "cl4"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "aCoefficients": [8.93145879, 3.863446641, 6.494528709, -8.804090192, -25.50440804]
+          },
+          "metadata": {
+            "min": 0,
+            "mean": 10,
+            "Trial1": 6.7522436646553,
+            "Trial2": 11.4933053690752,
+            "Trial3": 5.97047076730257,
+            "max": 81.7851472,
+            "density": [
+              0.002767633, 0.072390279, 0.167524386, 0.233154649, 0.180694181, 0.080367009, 
+              0.044352128, 0.028071658, 0.019103988, 0.013629953, 0.009891279, 0.007367607, 
+              0.005657935, 0.004324130, 0.003407833, 0.002491536, 0.002132153, 0.001894541, 
+              0.001656929, 0.001419317, 0.001181705, 0.000944093, 0.000706481, 0.000468870, 
+              0.000231258
+            ]
+          }
+        },
+        {
+          "name": "Marketing",
+          "ref": {"source": "rng", "name": "HDR8"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "aCoefficients": [9.872717622, 1.678242357, 2.54967822, 3.535388319, -13.40905029]
+          },
+          "metadata": {
+            "min": 0,
+            "mean": 10,
+            "Trial1": 4.97377773402723,
+            "Trial2": 5.26303264347232,
+            "Trial3": 11.3668582781926,
+            "max": 38.59529574,
+            "density": [
+              0.004109283, 0.042110568, 0.091705010, 0.110006024, 0.122020569, 0.134235996, 
+              0.147896307, 0.161461431, 0.167672333, 0.152978674, 0.117263845, 0.080513010, 
+              0.053583880, 0.035823821, 0.024233148, 0.016480777, 0.011221878, 0.008189092, 
+              0.005478863, 0.004659543, 0.003840222, 0.003020901, 0.002201580, 0.001382259, 
+              0.000562938
+            ]
+          }
+        },
+        {
+          "name": "ProductDemand",
+          "function": "SIP_Array",
+          "ref": {"source": "rng", "name": "indexRng"},
+          "arguments": {
+            "type": "csv",
+            "url": "https://sipmath.network/libraries/DemandSimpleCsvLib.csv",
+            "value": "Demand"
+          },
+          "metadata": {
+            "Average": 100000,
+            "Trial1": 141994,
+            "Trial2": 75597,
+            "Trial3": 103047,
+            "density": [
+              0.000133830, 0.000480271, 0.001542279, 0.004431848, 0.011395986, 0.026221889, 
+              0.053990967, 0.099477139, 0.164010075, 0.241970725, 0.319448006, 0.377383228, 
+              0.398942280, 0.377383228, 0.319448006, 0.241970725, 0.164010075, 0.099477139, 
+              0.053990967, 0.026221889, 0.011395986, 0.004431848, 0.001542279, 0.000480271, 
+              0.000133830
+            ]
+          }
+        },
+        {
+          "name": "ProductDemand2",
+          "function": "SIP_Array",
+          "ref": {"source": "rng", "name": "indexRng"},
+          "arguments": {
+            "type": "xlsx",
+            "url": "https://sipmath.network/libraries/Demand.xlsx",
+            "value": "Demand"
+          },
+          "metadata": {
+            "Average": 100000,
+            "Trial1": 141994,
+            "Trial2": 75597,
+            "Trial3": 103047,
+            "density": [
+              0.000133830, 0.000480271, 0.001542279, 0.004431848, 0.011395986, 0.026221889, 
+              0.053990967, 0.099477139, 0.164010075, 0.241970725, 0.319448006, 0.377383228, 
+              0.398942280, 0.377383228, 0.319448006, 0.241970725, 0.164010075, 0.099477139, 
+              0.053990967, 0.026221889, 0.011395986, 0.004431848, 0.001542279, 0.000480271, 
+              0.000133830
+            ]
+          }
+        },
+        {
+          "name": "Steelhead1 (array)",
+          "ref": {
+            "source": "copula",
+            "name": "HappyCopulaLib (array)",
+            "copulaLayer": "HapCopula"
+          },
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 10.4413037681972,
+            "Trial2": 9.96709008630459,
+            "Trial3": 10.2471838687802,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead2 (array)",
+          "ref": {
+            "source": "copula",
+            "name": "HappyCopulaLib (array)",
+            "copulaLayer": "PyCopula"
+          },
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 11.2543057323368,
+            "Trial2": 26.0663095769058,
+            "Trial3": 3.91094809755693,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead1 (csv)",
+          "ref": {"source": "copula", "name": "HappyCopulaLib (csv)", "copulaLayer": "HapCopula"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 10.4413037681972,
+            "Trial2": 9.96709008630459,
+            "Trial3": 10.2471838687802,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead2 (csv)",
+          "ref": {"source": "copula", "name": "HappyCopulaLib (csv)", "copulaLayer": "PyCopula"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 11.2543057323368,
+            "Trial2": 26.0663095769058,
+            "Trial3": 3.91094809755693,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead1 (dist)",
+          "ref": {
+            "source": "copula",
+            "name": "HappyCopulaLib (dist)",
+            "copulaLayer": "HapCopula"
+          },
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 10.4413037681972,
+            "Trial2": 9.96709008630459,
+            "Trial3": 10.2471838687802,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead2 (dist)",
+          "ref": {"source": "copula", "name": "HappyCopulaLib (dist)", "copulaLayer": "PyCopula"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 11.2543057323368,
+            "Trial2": 26.0663095769058,
+            "Trial3": 3.91094809755693,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead1 (xlsx)",
+          "ref": {
+            "source": "copula",
+            "name": "HappyCopulaLib (xlsx)",
+            "copulaLayer": "HapCopula"
+          },
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 10.4413037681972,
+            "Trial2": 9.96709008630459,
+            "Trial3": 10.2471838687802,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Steelhead2 (xlsx)",
+          "ref": {"source": "copula", "name": "HappyCopulaLib (xlsx)", "copulaLayer": "PyCopula"},
+          "function": "Metalog_1_0",
+          "arguments": {
+            "lowerBound": 2,
+            "aCoefficients": [
+                2.058955983,  -2.281157829,  -1.513012712,  10.042285460,   4.898678377, 
+               13.055783020, -32.701452370,   5.303664167, -15.338680840, -13.912132650
+            ]
+          },
+          "metadata": {
+            "Average": 10.1244918,
+            "Trial1": 11.2543057323368,
+            "Trial2": 26.0663095769058,
+            "Trial3": 3.91094809755693,
+            "density": [
+              0.000000000, 0.009411357, 0.064517460, 0.075300228, 0.070537529, 0.078305788, 
+              0.109189176, 0.139477609, 0.088129388, 0.059900505, 0.042843555, 0.029680524, 
+              0.020151553, 0.013942071, 0.009942102, 0.007356791, 0.005664696, 0.004366737, 
+              0.003521197, 0.002675658, 0.002144864, 0.001687803, 0.001303557, 0.000973593, 
+              0.000657581
+            ]
+          }
+        },
+        {
+          "name": "Poisson",
+          "ref": {"source": "rng", "name": "HDR9"},
+          "function": "Lookup_Table",
+          "metadata": {
+            "Lambda": 0.5,
+            "Trial6": 1,
+            "Trial23": 2,
+            "Trial299": 3,
+            "histogram": [0.606531, 0.303265, 0.075816, 0.012636, 0.00158, 0.000158]
+          },
+          "arguments": {
+            "value": [
+              [ 0.606530660, 0 ],
+              [ 0.909795990, 1 ],
+              [ 0.985612322, 2 ],
+              [ 0.998248377, 3 ],
+              [ 0.999827884, 4 ],
+              [ 0.999985835, 5 ],
+              [ 0.999998998, 6 ],
+              [ 0.999999938, 7 ],
+              [ 0.999999997, 8 ],
+              [ 1.000000000, 9 ]
+            ]
+          }
+        },
+        {
+          "name": "TotalDamage",
+          "ref": {"source": "rng", "name": "HDR10"},
+          "function": "GeneralizedMetalog",
+          "arguments": {
+            "aCoefficients": {"type": "globalVariables", "value": "sumOfIidLognormals"},
+            "dims": [
+              { "type": "parameter", "name": "numberOfIIDs", "numericType": "integer" },
+              { "type": "parameter", "name": "shapeValue"  , "numericType": "float"   }
+            ],
+            "lowerBound": 0
+          }
+        },
+        {
+          "name": "SIP_2",
+          "function": "SIP_Array",
+          "ref": {"source": "rng", "name": "indexRng"},
+          "arguments": {
+            "type": "array",
+            "value": [
+              1.0000000, 2.0000000, 3.0000000, 0.3527161, 0.0506171, 0.5373222, 0.4650002, 
+              0.3869764, 0.3064608, 0.6379015, 0.4727577, 0.6287194, 0.4284831
+            ]
+          }
+        },
+        {
+          "name": "SIP_3",
+          "function": "SIP_Array",
+          "ref": {"source": "rng", "name": "indexRng"},
+          "arguments": {
+            "type": "array",
+            "value": [
+              0.4330178, 0.6705132, 0.1306238, 0.3527161, 0.0506171, 0.5373222, 0.4650002, 
+              0.3869764, 0.3064608, 0.6379015, 0.4727577, 0.6287194, 0.4284831
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["Gaussian Copula Development Time Library"]
+    },
+    "dateCreated": {
+      "$id": "#/properties/dateCreated",
+      "type": "string",
+      "title": "The dateCreated schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["2021-07-03"]
+    },
+    "version": {
+      "$id": "#/properties/version",
+      "type": "string",
+      "title": "The version schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["0"]
+    },
+    "provenance": {
+      "$id": "#/properties/provenance",
+      "type": "string",
+      "title": "The provenance schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": ["SLS 4-23-21"]
+    },
+    "globalVariables": {
+      "$id": "#/properties/globalVariables",
+      "type": "array",
+      "title": "The globalVariables schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "name": "correlationMatrixValue",
+            "value": {
+              "columns": ["Accounts", "Products", "Orders", "Fulfillment"],
+              "rows": ["Accounts", "Products", "Orders", "Fulfillment"],
+              "matrix": [
+                { "row": "Accounts"   , "col": "Accounts"   , "value": 1.00 },
+                { "row": "Accounts"   , "col": "Products"   , "value": 0.00 },
+                { "row": "Accounts"   , "col": "Orders"     , "value": 0.00 },
+                { "row": "Accounts"   , "col": "Fulfillment", "value": 0.00 },
+                { "row": "Products"   , "col": "Products"   , "value": 1.00 },
+                { "row": "Products"   , "col": "Orders"     , "value": 0.00 },
+                { "row": "Products"   , "col": "Fulfillment", "value": 0.75 },
+                { "row": "Orders"     , "col": "Orders"     , "value": 1.00 },
+                { "row": "Orders"     , "col": "Fulfillment", "value": 0.00 },
+                { "row": "Fulfillment", "col": "Fulfillment", "value": 1.00 }
+              ]
+            }
+          },
+          {
+            "name": "sumOfIidLognormals",
+            "value": [
+              {
+                "shapeValue": 1.1,
+                "numberOfIIDs": 1,
+                "aCoefficients": [
+                   2.302605, -0.012263,  0.003631,  0.236955, -0.014925,  0.137107, -0.323127, 
+                  -0.012196,  0.040094
+                ]
+              },
+              {
+                "shapeValue": 1.1,
+                "numberOfIIDs": 2,
+                "aCoefficients": [
+                   2.997134, -0.005738,  0.006037,  0.155605, -0.024809,  0.086815, -0.197671, 
+                  -0.020988,  0.065798
+                ]
+              },
+              {
+                "shapeValue": 1.1,
+                "numberofIIDs": 3,
+                "aCoefficients": [
+                   3.403081, -0.007068, -0.001965,  0.137062,  0.007647,  0.079549, -0.191059, 
+                   0.006260, -0.014339
+                ]
+              },
+              {
+                "shapeValue": 1.2,
+                "numberofIIDs": 1,
+                "aCoefficients": [
+                   2.302623, -0.023458,  0.006946,  0.453277, -0.028551,  0.262276, -0.618120, 
+                  -0.023329,  0.076697
+                ]
+              },
+              {
+                "shapeValue": 1.2,
+                "numberofIIDs": 2,
+                "aCoefficients": [
+                   3.000814, -0.012044,  0.009722,  0.302727, -0.040367,  0.170339, -0.393583, 
+                  -0.033614,  0.107979
+                ]
+              },
+              {
+                "shapeValue": 1.2,
+                "numberofIIDs": 3,
+                "aCoefficients": [
+                   3.407988, -0.012641, -0.002373,  0.258786,  0.009286,  0.149144, -0.353578, 
+                   0.007015, -0.013292
+                ]
+              }
+            ]
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/globalVariables/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/globalVariables/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "correlationMatrixValue",
+                "value": {
+                  "columns": ["Accounts", "Products", "Orders", "Fulfillment"],
+                  "rows": ["Accounts", "Products", "Orders", "Fulfillment"],
+                  "matrix": [
+                    { "row": "Accounts"   , "col": "Accounts"   , "value": 1.00 },
+                    { "row": "Accounts"   , "col": "Products"   , "value": 0.00 },
+                    { "row": "Accounts"   , "col": "Orders"     , "value": 0.00 },
+                    { "row": "Accounts"   , "col": "Fulfillment", "value": 0.00 },
+                    { "row": "Products"   , "col": "Products"   , "value": 1.00 },
+                    { "row": "Products"   , "col": "Orders"     , "value": 0.00 },
+                    { "row": "Products"   , "col": "Fulfillment", "value": 0.75 },
+                    { "row": "Orders"     , "col": "Orders"     , "value": 1.00 },
+                    { "row": "Orders"     , "col": "Fulfillment", "value": 0.00 },
+                    { "row": "Fulfillment", "col": "Fulfillment", "value": 1.00 }
+                  ]
+                }
+              }
+            ],
+            "required": ["name", "value"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/globalVariables/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["correlationMatrixValue"]
+              },
+              "value": {
+                "$id": "#/properties/globalVariables/items/anyOf/0/properties/value",
+                "type": "object",
+                "title": "The value schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "columns": ["Accounts", "Products", "Orders", "Fulfillment"],
+                    "rows": ["Accounts", "Products", "Orders", "Fulfillment"],
+                    "matrix": [
+                      { "row": "Accounts"   , "col": "Accounts"   , "value": 1.00 },
+                      { "row": "Accounts"   , "col": "Products"   , "value": 0.00 },
+                      { "row": "Accounts"   , "col": "Orders"     , "value": 0.00 },
+                      { "row": "Accounts"   , "col": "Fulfillment", "value": 0.00 },
+                      { "row": "Products"   , "col": "Products"   , "value": 1.00 },
+                      { "row": "Products"   , "col": "Orders"     , "value": 0.00 },
+                      { "row": "Products"   , "col": "Fulfillment", "value": 0.75 },
+                      { "row": "Orders"     , "col": "Orders"     , "value": 1.00 },
+                      { "row": "Orders"     , "col": "Fulfillment", "value": 0.00 },
+                      { "row": "Fulfillment", "col": "Fulfillment", "value": 1.00 }
+                    ]
+                  }
+                ],
+                "required": ["columns", "rows", "matrix"],
+                "properties": {
+                  "columns": {
+                    "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/columns",
+                    "type": "array",
+                    "title": "The columns schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ ["Accounts", "Products"] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/columns/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/columns/items/anyOf/0",
+                          "type": "string",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": ["Accounts", "Products"]
+                        }
+                      ]
+                    }
+                  },
+                  "rows": {
+                    "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/rows",
+                    "type": "array",
+                    "title": "The rows schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ ["Accounts", "Products"] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/rows/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/rows/items/anyOf/0",
+                          "type": "string",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": ["Accounts", "Products"]
+                        }
+                      ]
+                    }
+                  },
+                  "matrix": {
+                    "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/matrix",
+                    "type": "array",
+                    "title": "The matrix schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                      [
+                        { "row": "Accounts", "col": "Accounts", "value": 1 },
+                        { "row": "Accounts", "col": "Products", "value": 0 }
+                      ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/matrix/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/matrix/items/anyOf/0",
+                          "type": "object",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": {},
+                          "examples": [ {"row": "Accounts", "col": "Accounts", "value": 1} ],
+                          "required": ["row", "col", "value"],
+                          "properties": {
+                            "row": {
+                              "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/matrix/items/anyOf/0/properties/row",
+                              "type": "string",
+                              "title": "The row schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": ["Accounts"]
+                            },
+                            "col": {
+                              "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/matrix/items/anyOf/0/properties/col",
+                              "type": "string",
+                              "title": "The col schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": ["Accounts"]
+                            },
+                            "value": {
+                              "$id": "#/properties/globalVariables/items/anyOf/0/properties/value/properties/matrix/items/anyOf/0/properties/value",
+                              "type": "number",
+                              "title": "The value schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": 0,
+                              "examples": [1]
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "U01": {
+      "$id": "#/properties/U01",
+      "type": "object",
+      "title": "The U01 schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "rng": [
+            {
+              "name": "HDR1",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 1, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR2",
+              "function": "HDR_2_0",
+              "arguments": {
+                "counter": "PM_Index",
+                "entity": 9039920,
+                "varId": 2,
+                "seed3": {"type": "parameter", "name": "User-entered Seed3"},
+                "seed4": 0
+              }
+            },
+            {
+              "name": "HDR3",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 3, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR4",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 4, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR5",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 5, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR6",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 6, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR7",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 7, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR8",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 8, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "indexRng",
+              "function": "Index",
+              "arguments": {"counter": "PM_Index"}
+            },
+            {
+              "name": "HDR9",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 9, "seed3": 0, "seed4": 0}
+            },
+            {
+              "name": "HDR10",
+              "function": "HDR_2_0",
+              "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 10, "seed3": 0, "seed4": 0}
+            }
+          ],
+          "copula": [
+            {
+              "name": "Gaussian",
+              "function": "GaussianCopula",
+              "arguments": {
+                "correlationMatrix": {"type": "globalVariables", "value": "correlationMatrixValue"},
+                "rng": ["HDR4", "HDR5", "HDR6", "HDR7"]
+              },
+              "copulaLayer": ["cl1", "cl2", "cl3", "cl4"]
+            },
+            {
+              "name": "HappyCopulaLib (array)",
+              "function": "SIP_Array",
+              "arguments": {
+                "type": "array",
+                "value": [
+                  [0.3782, 0.2752, 0.4712, 0.9722, 0.5692, 0.5942, 0.9422, 0.1572, 0.5682, 0.5032],
+                  [0.1272, 0.0512, 0.0162, 0.5962, 0.6462, 0.7072, 0.1732, 0.2382, 0.6432, 0.0012]
+                ]
+              },
+              "copulaLayer": ["HapCopula", "PyCopula"]
+            },
+            {
+              "name": "HappyCopulaLib (csv)",
+              "function": "SIP_Array",
+              "arguments": {
+                "type": "csv",
+                "url": "https://sipmath.network/libraries/HappyCopulaSimple.csv",
+                "value": ["HapCopula", "PyCopula"]
+              },
+              "copulaLayer": ["HapCopula", "PyCopula"]
+            },
+            {
+              "name": "HappyCopulaLib (dist)",
+              "function": "SIP_Array",
+              "arguments": {
+                "type": "dist",
+                "value": [
+                  "<dist name=\"Steelhead1\" avg=\"0.49970000000000014\" min=\"0.0002\" max=\"0.9992\" count=\"1000\" type=\"Double\" origin=\"ProbabilityManagement.org\" ver=\"1.1\">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</dist>", 
+                  "<dist name=\"Steelhead2\" avg=\"0.4997000000000002\" min=\"0.0002\" max=\"0.9992\" count=\"1000\" type=\"Double\" origin=\"ProbabilityManagement.org\" ver=\"1.1\">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</dist>"
+                ]
+              },
+              "copulaLayer": ["HapCopula", "PyCopula"]
+            },
+            {
+              "name": "HappyCopulaLib (xlsx)",
+              "function": "SIP_Array",
+              "arguments": {
+                "type": "xlsx",
+                "url": "https://sipmath.network/libraries/HappyCopulaLib.xlsx",
+                "value": ["HapCopula", "PyCopula"]
+              },
+              "copulaLayer": ["HapCopula", "PyCopula"]
+            }
+          ]
+        }
+      ],
+      "required": ["rng"],
+      "properties": {
+        "rng": {
+          "$id": "#/properties/U01/properties/rng",
+          "type": "array",
+          "title": "The rng schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            [
+              {
+                "name": "HDR1",
+                "function": "HDR_2_0",
+                "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 1, "seed3": 0, "seed4": 0}
+              },
+              {
+                "name": "HDR2",
+                "function": "HDR_2_0",
+                "arguments": {
+                  "counter": "PM_Index",
+                  "entity": 9039920,
+                  "varId": 2,
+                  "seed3": {"type": "parameter", "name": "User-entered Seed3"},
+                  "seed4": 0
+                }
+              }
+            ]
+          ],
+          "additionalItems": true,
+          "items": {
+            "$id": "#/properties/U01/properties/rng/items",
+            "anyOf": [
+              {
+                "$id": "#/properties/U01/properties/rng/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "name": "HDR1",
+                    "function": "HDR_2_0",
+                    "arguments": {"counter": "PM_Index", "entity": 9039920, "varId": 1, "seed3": 0, "seed4": 0}
+                  }
+                ],
+                "required": ["name", "function", "arguments"],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR1"]
+                  },
+                  "function": {
+                    "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/function",
+                    "type": "string",
+                    "title": "The function schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR_2_0"]
+                  },
+                  "arguments": {
+                    "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/arguments",
+                    "type": "object",
+                    "title": "The arguments schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {"counter": "PM_Index", "entity": 9039920, "varId": 1, "seed3": 0, "seed4": 0}
+                    ],
+                    "properties": {
+                      "counter": {
+                        "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/arguments/properties/counter",
+                        "type": "string",
+                        "title": "The counter schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": ["PM_Index"]
+                      },
+                      "entity": {
+                        "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/arguments/properties/entity",
+                        "type": "integer",
+                        "title": "The entity schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [9039920]
+                      },
+                      "varId": {
+                        "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/arguments/properties/varId",
+                        "type": "integer",
+                        "title": "The varId schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [1]
+                      },
+                      "seed3": {
+                        "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/arguments/properties/seed3",
+                        "type": "integer",
+                        "title": "The seed3 schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [0]
+                      },
+                      "seed4": {
+                        "$id": "#/properties/U01/properties/rng/items/anyOf/0/properties/arguments/properties/seed4",
+                        "type": "integer",
+                        "title": "The seed4 schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [0]
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              },
+              {
+                "$id": "#/properties/U01/properties/rng/items/anyOf/1",
+                "type": "object",
+                "title": "The second anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "name": "HDR2",
+                    "function": "HDR_2_0",
+                    "arguments": {
+                      "counter": "PM_Index",
+                      "entity": 9039920,
+                      "varId": 2,
+                      "seed3": {"type": "parameter", "name": "User-entered Seed3"},
+                      "seed4": 0
+                    }
+                  }
+                ],
+                "required": ["name", "function", "arguments"],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/U01/properties/rng/items/anyOf/1/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR2"]
+                  },
+                  "function": {
+                    "$id": "#/properties/U01/properties/rng/items/anyOf/1/properties/function",
+                    "type": "string",
+                    "title": "The function schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR_2_0"]
+                  },
+                  "arguments": {
+                    "$id": "#/properties/U01/properties/rng/items/anyOf/1/properties/arguments",
+                    "type": "object",
+                    "title": "The arguments schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "counter": "PM_Index",
+                        "entity": 9039920,
+                        "varId": 2,
+                        "seed3": {"type": "parameter", "name": "User-entered Seed3"},
+                        "seed4": 0
+                      }
+                    ],
+                    "additionalProperties": true
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        },
+        "copula": {
+          "$id": "#/properties/U01/properties/copula",
+          "type": "array",
+          "title": "The copula schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            [
+              {
+                "name": "Gaussian",
+                "function": "GaussianCopula",
+                "arguments": {
+                  "correlationMatrix": {"type": "globalVariables", "value": "correlationMatrixValue"},
+                  "rng": ["HDR4", "HDR5", "HDR6", "HDR7"]
+                },
+                "copulaLayer": ["cl1", "cl2", "cl3", "cl4"]
+              },
+              {
+                "name": "HappyCopulaLib (array)",
+                "function": "SIP_Array",
+                "arguments": {
+                  "type": "array",
+                  "value": [
+                    [0.3782, 0.2752, 0.4712, 0.9722, 0.5692, 0.5942, 0.9422, 0.1572, 0.5682, 0.5032],
+                    [0.1272, 0.0512, 0.0162, 0.5962, 0.6462, 0.7072, 0.1732, 0.2382, 0.6432, 0.0012]
+                  ]
+                },
+                "copulaLayer": ["HapCopula", "PyCopula"]
+              }
+            ]
+          ],
+          "additionalItems": true,
+          "items": {
+            "$id": "#/properties/U01/properties/copula/items",
+            "anyOf": [
+              {
+                "$id": "#/properties/U01/properties/copula/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "name": "Gaussian",
+                    "function": "GaussianCopula",
+                    "arguments": {
+                      "correlationMatrix": {"type": "globalVariables", "value": "correlationMatrixValue"},
+                      "rng": ["HDR4", "HDR5", "HDR6", "HDR7"]
+                    },
+                    "copulaLayer": ["cl1", "cl2", "cl3", "cl4"]
+                  }
+                ],
+                "required": ["name", "function", "arguments"],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Gaussian"]
+                  },
+                  "function": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/function",
+                    "type": "string",
+                    "title": "The function schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["GaussianCopula"]
+                  },
+                  "arguments": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments",
+                    "type": "object",
+                    "title": "The arguments schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "correlationMatrix": {"type": "globalVariables", "value": "correlationMatrixValue"},
+                        "rng": ["HDR4", "HDR5", "HDR6", "HDR7"]
+                      }
+                    ],
+                    "required": ["correlationMatrix", "rng"],
+                    "properties": {
+                      "correlationMatrix": {
+                        "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments/properties/correlationMatrix",
+                        "type": "object",
+                        "title": "The correlationMatrix schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [ {"type": "globalVariables", "value": "correlationMatrixValue"} ],
+                        "required": ["type", "value"],
+                        "properties": {
+                          "type": {
+                            "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments/properties/correlationMatrix/properties/type",
+                            "type": "string",
+                            "title": "The type schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": ["globalVariables"]
+                          },
+                          "value": {
+                            "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments/properties/correlationMatrix/properties/value",
+                            "type": "string",
+                            "title": "The value schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": ["correlationMatrixValue"]
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "rng": {
+                        "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments/properties/rng",
+                        "type": "array",
+                        "title": "The rng schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [ ["HDR4", "HDR5"] ],
+                        "additionalItems": true,
+                        "items": {
+                          "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments/properties/rng/items",
+                          "anyOf": [
+                            {
+                              "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/arguments/properties/rng/items/anyOf/0",
+                              "type": "string",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": ["HDR4", "HDR5"]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "copulaLayer": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/copulaLayer",
+                    "type": "array",
+                    "title": "The copulaLayer schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ ["cl1", "cl2"] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/copulaLayer/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/U01/properties/copula/items/anyOf/0/properties/copulaLayer/items/anyOf/0",
+                          "type": "string",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": ["cl1", "cl2"]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              },
+              {
+                "$id": "#/properties/U01/properties/copula/items/anyOf/1",
+                "type": "object",
+                "title": "The second anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "name": "HappyCopulaLib (csv)",
+                    "function": "SIP_Array",
+                    "arguments": {
+                      "type": "csv",
+                      "url": "https://sipmath.network/libraries/HappyCopulaSimple.csv",
+                      "value": ["HapCopula", "PyCopula"]
+                    },
+                    "copulaLayer": ["HapCopula", "PyCopula"]
+                  }
+                ],
+                "required": ["name", "function", "arguments"],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HappyCopulaLib (csv)"]
+                  },
+                  "function": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/function",
+                    "type": "string",
+                    "title": "The function schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["SIP_Array"]
+                  },
+                  "arguments": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/arguments",
+                    "type": "object",
+                    "title": "The arguments schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "type": "csv",
+                        "url": "https://sipmath.network/libraries/HappyCopulaSimple.csv",
+                        "value": ["HapCopula", "PyCopula"]
+                      }
+                    ],
+                    "required": ["type", "url", "value"],
+                    "properties": {
+                      "type": {
+                        "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/arguments/properties/type",
+                        "type": "string",
+                        "title": "The type schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": ["csv"]
+                      },
+                      "url": {
+                        "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/arguments/properties/url",
+                        "type": "string",
+                        "title": "The url schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": ["https://sipmath.network/libraries/HappyCopulaSimple.csv"]
+                      },
+                      "value": {
+                        "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/arguments/properties/value",
+                        "type": "array",
+                        "title": "The value schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [ ["HapCopula", "PyCopula"] ],
+                        "additionalItems": true,
+                        "items": {
+                          "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/arguments/properties/value/items",
+                          "anyOf": [
+                            {
+                              "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/arguments/properties/value/items/anyOf/0",
+                              "type": "string",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": ["HapCopula", "PyCopula"]
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "copulaLayer": {
+                    "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/copulaLayer",
+                    "type": "array",
+                    "title": "The copulaLayer schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ ["HapCopula", "PyCopula"] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/copulaLayer/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/U01/properties/copula/items/anyOf/1/properties/copulaLayer/items/anyOf/0",
+                          "type": "string",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": ["HapCopula", "PyCopula"]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "sips": {
+      "$id": "#/properties/sips",
+      "type": "array",
+      "title": "The sips schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "name": "Variable1",
+            "ref": {"source": "rng", "name": "HDR1"},
+            "function": "Metalog_1_0",
+            "arguments": {
+              "lowerBound": 0,
+              "upperBound": 5,
+              "aCoefficients": [
+                -0.44366710027334577,  0.31428823046335125, -0.46025990428473268, 
+                 0.52556291243339126,  2.11565238380833565
+              ]
+            }
+          },
+          {
+            "name": "Variable2_seed3_param",
+            "ref": {"source": "rng", "name": "HDR2"},
+            "function": "Metalog_1_0",
+            "rounding": "nearest",
+            "arguments": {
+              "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+            }
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/sips/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/sips/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Variable1",
+                "ref": {"source": "rng", "name": "HDR1"},
+                "function": "Metalog_1_0",
+                "arguments": {
+                  "lowerBound": 0,
+                  "upperBound": 5,
+                  "aCoefficients": [
+                    -0.44366710027334577,  0.31428823046335125, -0.46025990428473268, 
+                     0.52556291243339126,  2.11565238380833565
+                  ]
+                }
+              }
+            ],
+            "required": ["name", "ref", "function", "arguments"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Variable1"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/0/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "rng", "name": "HDR1"} ],
+                "required": ["source", "name"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/0/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["rng"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/0/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR1"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/0/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Metalog_1_0"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/0/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "lowerBound": 0,
+                    "upperBound": 5,
+                    "aCoefficients": [
+                      -0.44366710027334577,  0.31428823046335125, -0.46025990428473268, 
+                       0.52556291243339126,  2.11565238380833565
+                    ]
+                  }
+                ],
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "$id": "#/properties/sips/items/anyOf/1",
+            "type": "object",
+            "title": "The second anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Variable2_seed3_param",
+                "ref": {"source": "rng", "name": "HDR2"},
+                "function": "Metalog_1_0",
+                "rounding": "nearest",
+                "arguments": {
+                  "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+                }
+              }
+            ],
+            "required": ["name", "ref", "function", "arguments"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/1/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Variable2_seed3_param"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/1/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "rng", "name": "HDR2"} ],
+                "required": ["source", "name"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/1/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["rng"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/1/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR2"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/1/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Metalog_1_0"]
+              },
+              "rounding": {
+                "$id": "#/properties/sips/items/anyOf/1/properties/rounding",
+                "type": "string",
+                "title": "The rounding schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["nearest"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/1/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+                  }
+                ],
+                "required": ["aCoefficients"],
+                "properties": {
+                  "aCoefficients": {
+                    "$id": "#/properties/sips/items/anyOf/1/properties/arguments/properties/aCoefficients",
+                    "type": "array",
+                    "title": "The aCoefficients schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ [10.28359942, 1.433048092] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/sips/items/anyOf/1/properties/arguments/properties/aCoefficients/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/sips/items/anyOf/1/properties/arguments/properties/aCoefficients/items/anyOf/0",
+                          "type": "number",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [10.28359942, 1.433048092]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "$id": "#/properties/sips/items/anyOf/2",
+            "type": "object",
+            "title": "The third anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "StandardNormal",
+                "ref": {"source": "rng", "name": "HDR3"},
+                "function": "Metalog_1_0",
+                "arguments": {
+                  "aCoefficients": [
+                    -1.18721e-8, -108.7360185, 0.000228037, 437.4513354, -0.000910088, 988.3027041, 
+                    -3370.883493, -0.001941269, 0.006475465, -2823.944368, 7434.879183, 
+                    0.004897097, -0.011367609, 2456.743398, -3595.592826, -0.003114859
+                  ]
+                }
+              }
+            ],
+            "required": ["name", "ref", "function", "arguments"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/2/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["StandardNormal"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/2/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "rng", "name": "HDR3"} ],
+                "required": ["source", "name"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/2/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["rng"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/2/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR3"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/2/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Metalog_1_0"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/2/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "aCoefficients": [
+                      -1.18721e-8, -108.7360185, 0.000228037, 437.4513354, -0.000910088, 988.3027041, 
+                      -3370.883493, -0.001941269, 0.006475465, -2823.944368, 7434.879183, 
+                      0.004897097, -0.011367609, 2456.743398, -3595.592826, -0.003114859
+                    ]
+                  }
+                ],
+                "required": ["aCoefficients"],
+                "properties": {
+                  "aCoefficients": {
+                    "$id": "#/properties/sips/items/anyOf/2/properties/arguments/properties/aCoefficients",
+                    "type": "array",
+                    "title": "The aCoefficients schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ [-1.18721e-8, -108.7360185] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/sips/items/anyOf/2/properties/arguments/properties/aCoefficients/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/sips/items/anyOf/2/properties/arguments/properties/aCoefficients/items/anyOf/0",
+                          "type": "number",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [-1.18721e-8, -108.7360185]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "$id": "#/properties/sips/items/anyOf/3",
+            "type": "object",
+            "title": "The fourth anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "StandardNormal",
+                "ref": {"source": "rng", "name": "HDR3"},
+                "environment": "ExcelFrontline",
+                "function": "PsiNormal",
+                "arguments": {"mean": 0, "stdDev": 1}
+              }
+            ],
+            "required": ["name", "ref", "environment", "function", "arguments"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/3/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["StandardNormal"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/3/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "rng", "name": "HDR3"} ],
+                "required": ["source", "name"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/3/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["rng"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/3/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR3"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "environment": {
+                "$id": "#/properties/sips/items/anyOf/3/properties/environment",
+                "type": "string",
+                "title": "The environment schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["ExcelFrontline"]
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/3/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["PsiNormal"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/3/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"mean": 0, "stdDev": 1} ],
+                "required": ["mean", "stdDev"],
+                "properties": {
+                  "mean": {
+                    "$id": "#/properties/sips/items/anyOf/3/properties/arguments/properties/mean",
+                    "type": "integer",
+                    "title": "The mean schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [0]
+                  },
+                  "stdDev": {
+                    "$id": "#/properties/sips/items/anyOf/3/properties/arguments/properties/stdDev",
+                    "type": "integer",
+                    "title": "The stdDev schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [1]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "$id": "#/properties/sips/items/anyOf/4",
+            "type": "object",
+            "title": "The fifth anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "StandardNormal",
+                "ref": {"source": "rng", "name": "HDR3"},
+                "environment": "ExcelPalisade",
+                "function": "RiskNormal",
+                "arguments": {"mean": 0, "stdDev": 1}
+              }
+            ],
+            "required": ["name", "ref", "environment", "function", "arguments"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/4/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["StandardNormal"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/4/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "rng", "name": "HDR3"} ],
+                "required": ["source", "name"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/4/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["rng"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/4/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["HDR3"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "environment": {
+                "$id": "#/properties/sips/items/anyOf/4/properties/environment",
+                "type": "string",
+                "title": "The environment schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["ExcelPalisade"]
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/4/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["RiskNormal"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/4/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"mean": 0, "stdDev": 1} ],
+                "required": ["mean", "stdDev"],
+                "properties": {
+                  "mean": {
+                    "$id": "#/properties/sips/items/anyOf/4/properties/arguments/properties/mean",
+                    "type": "integer",
+                    "title": "The mean schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [0]
+                  },
+                  "stdDev": {
+                    "$id": "#/properties/sips/items/anyOf/4/properties/arguments/properties/stdDev",
+                    "type": "integer",
+                    "title": "The stdDev schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [1]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "$id": "#/properties/sips/items/anyOf/5",
+            "type": "object",
+            "title": "The sixth anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Accounts",
+                "ref": {"source": "copula", "name": "Gaussian", "copulaLayer": "cl1"},
+                "function": "Metalog_1_0",
+                "arguments": {
+                  "aCoefficients": [9.872717622, 1.678242357, 2.54967822, 3.535388319, -13.40905029]
+                },
+                "metadata": {
+                  "min": 0,
+                  "mean": 10,
+                  "Trial1": 5.91064824323855,
+                  "Trial2": 3.99951401423695,
+                  "Trial3": 3.61593085127843,
+                  "max": 38.59529574,
+                  "density": [
+                    0.004109283, 0.042110568, 0.091705010, 0.110006024, 0.122020569, 0.134235996, 
+                    0.147896307, 0.161461431, 0.167672333, 0.152978674, 0.117263845, 0.080513010, 
+                    0.053583880, 0.035823821, 0.024233148, 0.016480777, 0.011221878, 0.008189092, 
+                    0.005478863, 0.004659543, 0.003840222, 0.003020901, 0.002201580, 0.001382259, 
+                    0.000562938
+                  ]
+                }
+              }
+            ],
+            "required": ["name", "ref", "function", "arguments", "metadata"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/5/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Accounts"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/5/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "copula", "name": "Gaussian", "copulaLayer": "cl1"} ],
+                "required": ["source", "name", "copulaLayer"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["copula"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Gaussian"]
+                  },
+                  "copulaLayer": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/ref/properties/copulaLayer",
+                    "type": "string",
+                    "title": "The copulaLayer schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["cl1"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/5/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Metalog_1_0"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/5/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "aCoefficients": [9.872717622, 1.678242357, 2.54967822, 3.535388319, -13.40905029]
+                  }
+                ],
+                "required": ["aCoefficients"],
+                "properties": {
+                  "aCoefficients": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/arguments/properties/aCoefficients",
+                    "type": "array",
+                    "title": "The aCoefficients schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ [9.872717622, 1.678242357] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/sips/items/anyOf/5/properties/arguments/properties/aCoefficients/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/sips/items/anyOf/5/properties/arguments/properties/aCoefficients/items/anyOf/0",
+                          "type": "number",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [9.872717622, 1.678242357]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              },
+              "metadata": {
+                "$id": "#/properties/sips/items/anyOf/5/properties/metadata",
+                "type": "object",
+                "title": "The metadata schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "min": 0,
+                    "mean": 10,
+                    "Trial1": 5.91064824323855,
+                    "Trial2": 3.99951401423695,
+                    "Trial3": 3.61593085127843,
+                    "max": 38.59529574,
+                    "density": [
+                      0.004109283, 0.042110568, 0.091705010, 0.110006024, 0.122020569, 0.134235996, 
+                      0.147896307, 0.161461431, 0.167672333, 0.152978674, 0.117263845, 0.080513010, 
+                      0.053583880, 0.035823821, 0.024233148, 0.016480777, 0.011221878, 0.008189092, 
+                      0.005478863, 0.004659543, 0.003840222, 0.003020901, 0.002201580, 0.001382259, 
+                      0.000562938
+                    ]
+                  }
+                ],
+                "required": ["min", "mean", "Trial1", "Trial2", "Trial3", "max", "density"],
+                "properties": {
+                  "min": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/min",
+                    "type": "integer",
+                    "title": "The min schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [0]
+                  },
+                  "mean": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/mean",
+                    "type": "integer",
+                    "title": "The mean schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [10]
+                  },
+                  "Trial1": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/Trial1",
+                    "type": "number",
+                    "title": "The Trial1 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [5.91064824323855]
+                  },
+                  "Trial2": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/Trial2",
+                    "type": "number",
+                    "title": "The Trial2 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [3.99951401423695]
+                  },
+                  "Trial3": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/Trial3",
+                    "type": "number",
+                    "title": "The Trial3 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [3.61593085127843]
+                  },
+                  "max": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/max",
+                    "type": "number",
+                    "title": "The max schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [38.59529574]
+                  },
+                  "density": {
+                    "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/density",
+                    "type": "array",
+                    "title": "The density schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ [0.004109283, 0.042110568] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/density/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/sips/items/anyOf/5/properties/metadata/properties/density/items/anyOf/0",
+                          "type": "number",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [0.004109283, 0.042110568]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          {
+            "$id": "#/properties/sips/items/anyOf/6",
+            "type": "object",
+            "title": "The seventh anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Products",
+                "ref": {"source": "copula", "name": "Gaussian", "copulaLayer": "cl2"},
+                "function": "Metalog_1_0",
+                "arguments": {
+                  "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+                },
+                "metadata": {
+                  "min": 0,
+                  "mean": 10,
+                  "Trial1": 4.81850430027545,
+                  "Trial2": 16.264999616127,
+                  "Trial3": 9.21182344011462,
+                  "max": 33.17541333,
+                  "density": [
+                    0.002930180, 0.018377025, 0.043616484, 0.071502559, 0.088976553, 0.101891981, 
+                    0.114180833, 0.127937682, 0.144722341, 0.165708773, 0.189118409, 0.198621052, 
+                    0.162260460, 0.103661376, 0.062148829, 0.037849594, 0.023736807, 0.015023748, 
+                    0.010251008, 0.006852863, 0.005627723, 0.004402584, 0.003177444, 0.001952305, 
+                    0.000727165
+                  ]
+                }
+              }
+            ],
+            "required": ["name", "ref", "function", "arguments", "metadata"],
+            "properties": {
+              "name": {
+                "$id": "#/properties/sips/items/anyOf/6/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Products"]
+              },
+              "ref": {
+                "$id": "#/properties/sips/items/anyOf/6/properties/ref",
+                "type": "object",
+                "title": "The ref schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [ {"source": "copula", "name": "Gaussian", "copulaLayer": "cl2"} ],
+                "required": ["source", "name", "copulaLayer"],
+                "properties": {
+                  "source": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/ref/properties/source",
+                    "type": "string",
+                    "title": "The source schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["copula"]
+                  },
+                  "name": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/ref/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Gaussian"]
+                  },
+                  "copulaLayer": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/ref/properties/copulaLayer",
+                    "type": "string",
+                    "title": "The copulaLayer schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["cl2"]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "function": {
+                "$id": "#/properties/sips/items/anyOf/6/properties/function",
+                "type": "string",
+                "title": "The function schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": ["Metalog_1_0"]
+              },
+              "arguments": {
+                "$id": "#/properties/sips/items/anyOf/6/properties/arguments",
+                "type": "object",
+                "title": "The arguments schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "aCoefficients": [10.28359942, 1.433048092, 1.737463084, 3.927285373, -13.45782811]
+                  }
+                ],
+                "required": ["aCoefficients"],
+                "properties": {
+                  "aCoefficients": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/arguments/properties/aCoefficients",
+                    "type": "array",
+                    "title": "The aCoefficients schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ [10.28359942, 1.433048092] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/sips/items/anyOf/6/properties/arguments/properties/aCoefficients/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/sips/items/anyOf/6/properties/arguments/properties/aCoefficients/items/anyOf/0",
+                          "type": "number",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [10.28359942, 1.433048092]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              },
+              "metadata": {
+                "$id": "#/properties/sips/items/anyOf/6/properties/metadata",
+                "type": "object",
+                "title": "The metadata schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "min": 0,
+                    "mean": 10,
+                    "Trial1": 4.81850430027545,
+                    "Trial2": 16.264999616127,
+                    "Trial3": 9.21182344011462,
+                    "max": 33.17541333,
+                    "density": [
+                      0.002930180, 0.018377025, 0.043616484, 0.071502559, 0.088976553, 0.101891981, 
+                      0.114180833, 0.127937682, 0.144722341, 0.165708773, 0.189118409, 0.198621052, 
+                      0.162260460, 0.103661376, 0.062148829, 0.037849594, 0.023736807, 0.015023748, 
+                      0.010251008, 0.006852863, 0.005627723, 0.004402584, 0.003177444, 0.001952305, 
+                      0.000727165
+                    ]
+                  }
+                ],
+                "required": ["min", "mean", "Trial1", "Trial2", "Trial3", "max", "density"],
+                "properties": {
+                  "min": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/min",
+                    "type": "integer",
+                    "title": "The min schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [0]
+                  },
+                  "mean": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/mean",
+                    "type": "integer",
+                    "title": "The mean schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [10]
+                  },
+                  "Trial1": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/Trial1",
+                    "type": "number",
+                    "title": "The Trial1 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [4.81850430027545]
+                  },
+                  "Trial2": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/Trial2",
+                    "type": "number",
+                    "title": "The Trial2 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [16.264999616127]
+                  },
+                  "Trial3": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/Trial3",
+                    "type": "number",
+                    "title": "The Trial3 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [9.21182344011462]
+                  },
+                  "max": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/max",
+                    "type": "number",
+                    "title": "The max schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [33.17541333]
+                  },
+                  "density": {
+                    "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/density",
+                    "type": "array",
+                    "title": "The density schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [ [0.00293018, 0.018377025] ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/density/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/sips/items/anyOf/6/properties/metadata/properties/density/items/anyOf/0",
+                          "type": "number",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [0.00293018, 0.018377025]
+                        }
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
