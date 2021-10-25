@@ -2,4 +2,4 @@ init:
 	pip install -r requirements.txt
 
 test:
-	pytest --color=yes
+	pytest --color=yes --tb=short

@@ -33,6 +33,23 @@ class HDRTestSuite(unittest.TestCase):
     @patch("metalog.metalog.fit")
     @patch("json.dump")
     @patch("builtins.open")
+    def test_Json_calls_out_to_metalog_fit_properly(self, mock_open, mock_dump, mock_fit):
+        mock_fit.return_value = fit_fixture()
+        
+        fixture = DataFrame(data={
+            "Accounts": [10.24313638, 13.69812026, 12.62841292, 2.890162231, 7.60269451],
+            "Products": [7.00895936, 11.61220758, 5.07099725, 7.542072262, 13.37670202],
+        })
+        PySIP.Json(fixture, "foo.json", "bar")
+
+        mock_fit.assert_called_with(
+            ANY, bounds=[0, 1], boundedness='u', term_limit=5, term_lower_bound=5
+        )
+
+
+    @patch("metalog.metalog.fit")
+    @patch("json.dump")
+    @patch("builtins.open")
     def test_Json_contains_hdr_data_even_when_dependent(self, mock_open, mock_dump, mock_fit):
         mock_fit.return_value = fit_fixture()
         fixture = DataFrame(data={
