@@ -14,4 +14,4 @@ in a .json or .xlsx format. Requires the metalog package.
 ## chanceCalc
 Import function for SIPlibraries; for use in monte carlo simulation or data imports..
 
-*metalog package cane be found at https://pypi.org/project/metalog/
+*metalog package can be found at https://pypi.org/project/metalog/
