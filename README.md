@@ -10,7 +10,7 @@ in a .json or .xlsx format.
 import PySIP
 import pandas
 
-PySIP.Json(pandas.read_csv("input.csv"), "output.json", "bar")
+PySIP.Json(pandas.read_csv("input.csv"), "output.json", "Abraham Lincoln")
 ```
 
 ## PySIP2library
