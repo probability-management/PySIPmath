@@ -25,7 +25,7 @@ class BasicTestSuite(unittest.TestCase):
             'name': 'foo.json',
             'objectType': 'sipModel',
             'libraryType': 'SIPmath_3_0',
-            'dateCreated': '10-25-2021',
+            'dateCreated': ANY,
             'provenance': 'bar',
             'U01': {'rng': []},
             'sips': [],
